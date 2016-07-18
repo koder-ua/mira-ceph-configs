@@ -1,0 +1,61 @@
+crush_location: false
+osd_crush_location: "'root={{ ceph_crush_root }} rack={{ ceph_crush_rack }} host={{ ansible_hostname }}'"
+
+fsid: "{{ cluster_uuid.stdout }}"
+cephx: true
+
+osd_auto_discovery: false
+raw_multi_journal: true
+journal_colocation: false
+
+devices:
+  - /dev/sdg 
+  - /dev/sdh 
+  - /dev/sdi 
+  - /dev/sdj 
+  - /dev/sdk 
+  - /dev/sdl 
+  - /dev/sdm 
+  - /dev/sdn 
+  - /dev/sdo 
+  - /dev/sdp 
+  - /dev/sdq 
+  - /dev/sdr 
+  - /dev/sds 
+  - /dev/sdt 
+  - /dev/sdu 
+  - /dev/sdv 
+  - /dev/sdw 
+  - /dev/sdx 
+  - /dev/sdy 
+  - /dev/sdz 
+
+raw_journal_devices:
+  - /dev/sdc1 
+  - /dev/sdc2 
+  - /dev/sdc3 
+  - /dev/sdc4 
+  - /dev/sdc5 
+  - /dev/sdd1 
+  - /dev/sdd2 
+  - /dev/sdd3 
+  - /dev/sdd4 
+  - /dev/sdd5 
+  - /dev/sde1 
+  - /dev/sde2 
+  - /dev/sde3 
+  - /dev/sde4 
+  - /dev/sde5 
+  - /dev/sdf1 
+  - /dev/sdf2 
+  - /dev/sdf3 
+  - /dev/sdf4 
+  - /dev/sdf5 
+
+pools:
+    volumes: 16
+    compute: 8
+    test1: 0
+    test2: 0
+
+
